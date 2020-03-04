@@ -1,0 +1,45 @@
+:root {
+  font-size: 24px;
+  --background-primary: #292a30;
+}
+
+body {
+  font-family: Segoe UI, sans-serif;
+  margin: 0px;
+  padding: 0px;
+
+  background-color: var(--background-primary);
+}
+
+.text {
+  display: block;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.disclaimer {
+  display: block;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+
+  background-color: var(--background-primary);
+
+  text-align: right;
+  font-size: 12px;
+  font-family: monospace;
+  color: floralwhite;
+}
+
+p {
+  padding-bottom: 2em;
+  margin-left: 2em;
+  
+  color: floralwhite;
+}
+
+h1 {
+  font-weight: lighter;
+  color: slategray;
+}

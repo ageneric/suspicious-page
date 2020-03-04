@@ -1,3 +1,3 @@
-# A "Phishing Page"
+# "Legitimate Phishing Page"
 
-A joke page that doesn't do anything.
+This page has been set up as a joke. It doesn't do anything.

@@ -1,35 +1,38 @@
 :root {
   font-size: 24px;
-  --background-primary: #292a30;
+  font-size: calc(12px + 1vmax);
+  --background-primary: #292a2f;
 }
 
 body {
   font-family: Segoe UI, sans-serif;
-  margin: 0px;
   padding: 0px;
-
+  margin: 0px;
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
   background-color: var(--background-primary);
 }
 
 .text {
-  display: block;
   padding-left: 2em;
   padding-right: 2em;
 }
 
+.disclaimer-container {
+  flex: 0 0; /* do not grow or shrink */
+  margin-top: auto;
+}
+
 .disclaimer {
-  display: block;
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  padding: 0.5rem;
-
-  background-color: var(--background-primary);
-
   text-align: right;
-  font-size: 12px;
-  font-family: monospace;
-  color: floralwhite;
+  font-size: 0.5em;
+  padding: 1em;
+  
+  background-color: var(--background-primary);
+  color: slategray;
 }
 
 p {
@@ -40,6 +43,8 @@ p {
 }
 
 h1 {
+  margin-block-end: 1.67em;
+  
   font-weight: lighter;
   color: slategray;
 }

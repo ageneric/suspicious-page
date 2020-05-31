@@ -1,7 +1,13 @@
 :root {
-  font-size: 24px;
-  font-size: calc(12px + 1vmax);
-  --background-primary: #292a2f;
+  font-size: 20px;
+  font-size: calc(8px + 1vmax);
+
+  --background-dark: #292a2f;
+  --scrollbar-track: #1c1c1d;
+  --theme-primary: slategray;
+
+  --text-main: floralwhite;
+  --text-disclaimer: #8595a5;
 }
 
 body {
@@ -13,12 +19,56 @@ body {
   flex-direction: column;
   min-height: 100vh;
   
-  background-color: var(--background-primary);
+  background-color: var(--background-dark);
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
 }
 
 .text {
   padding-left: 2em;
   padding-right: 2em;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  min-width: 28em;
+}
+
+p {
+  padding-bottom: 2em;
+  margin-left: 2em;
+  
+  color: var(--text-main);
+}
+
+h1 {
+  font-weight: lighter;
+  color: var(--theme-primary);
+}
+
+@media only screen and (max-width: 30em) {
+  .text {
+    width: fit-content;
+    min-width: 0px;
+  }
+
+  p {
+    margin-left: 0em;
+  }
+}
+
+#current-page-address {
+  color: var(--theme-primary);
 }
 
 .disclaimer-container {
@@ -31,20 +81,5 @@ body {
   font-size: 0.5em;
   padding: 1em;
   
-  background-color: var(--background-primary);
-  color: slategray;
-}
-
-p {
-  padding-bottom: 2em;
-  margin-left: 2em;
-  
-  color: floralwhite;
-}
-
-h1 {
-  margin-block-end: 1.67em;
-  
-  font-weight: lighter;
-  color: slategray;
+  color: var(--text-disclaimer);
 }
